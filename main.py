@@ -68,17 +68,14 @@ def optimize_content(model, text: str, title: str, keywords_df: pd.DataFrame) ->
     Voice and Tone
     - Write in a helpful and explanatory voice that supports users while showcasing capabilities
     - Use a conversational, friendly tone as if speaking directly to the reader
-    - Employ contractions (it's, you'll, we're) to maintain natural flow
     - Sound trustworthy by providing relevant examples and consistent language
     - Write for readers with varying levels of technical expertise
 
     Writing Style
     - Lead with the most important information
-    - Start sentences with action verbs
     - Remove unnecessary phrases like "you can" and "there is/are"
     - Use US English spelling exclusively
     - Keep content concise and minimal
-    - Write like you speak, avoiding unnecessary jargon
     - Explain technical terms specific to the product, frameworks, or languages
     - Maintain consistent terminology throughout the document
 
@@ -86,12 +83,12 @@ def optimize_content(model, text: str, title: str, keywords_df: pd.DataFrame) ->
     - Use sentence case for all headings (capitalize only first word and proper nouns)
     - Capitalize product-specific terms (e.g., Prompts, Workflows, Datasets)
     - Omit end punctuation (periods, colons, exclamation marks, question marks) in:
-    - Titles
-    - Headings
-    - Subheadings
-    - UI titles
-    - List items of three or fewer words
-    - Use periods in paragraphs and body copy
+        Titles
+        Headings
+        Subheadings
+        UI titles
+        List items of three or fewer words
+        Use periods in paragraphs and body copy
 
     ## SEO Requirements
     - Create descriptive page titles with focus keywords
@@ -112,7 +109,6 @@ def optimize_content(model, text: str, title: str, keywords_df: pd.DataFrame) ->
     ## Content Review Checklist
     - Is the content helpful and explanatory?
     - Does it lead with the most important information?
-    - Are all sentences action-oriented?
     - Is technical jargon explained where necessary?
     - Are headings in sentence case?
     - Is formatting consistent throughout?
@@ -249,7 +245,7 @@ def main():
                                     with st.expander(f"🔍 {violation['error']}"):
                                         st.markdown(f"**Reason**: {violation['reason']}")
                                         st.markdown(f"**Fix**: {violation['fix']}")
-                                        
+
                             # Display Keyword Analysis
                             st.subheader("📊 Targeted Keywords Analysis")
                             if results["targeted_keywords"]:
